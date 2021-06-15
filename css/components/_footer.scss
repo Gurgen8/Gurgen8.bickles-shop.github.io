@@ -1,0 +1,91 @@
+
+.footer{
+    width: $maxwidth;
+    background:$section-col;
+
+    .footer__container{      
+       @include header-container;
+       padding:100px 0 100px 0;
+
+        
+        .footer__row{
+            width: 68%;
+            @include  flex;
+            flex-wrap: wrap;
+
+           ul{
+               list-style: $lst;
+               a{
+                   text-decoration: $td;
+               }
+           }        
+            
+        }
+    
+        
+            .footer__link{
+             @include footer-text
+              }
+
+
+
+            .title__block{
+            @include footer-text
+            }
+
+            .link__end{
+           @include footer-text;
+           font-size: 14px;
+            font-style: italic;
+            font-weight: $font-w-small;
+
+            &:hover{
+                background-color: aquamarine;
+               
+            }
+
+            }
+
+
+
+
+                .footer__link{
+              @include footer-text;
+
+              &:hover{
+                  box-shadow:3px 2px 5px #ccc;
+              }
+                    }
+
+        .soc__li{
+            display: inline-block;
+            padding-right:20px;
+            font-size: 32px;
+              &:nth-child(1) i{
+                  color:$soc-color;
+              }
+
+              &:nth-child(2) i{
+                color: #537bbd;
+                    
+             }
+             &:nth-child(3) i{
+                color:#eb5755;
+            }
+
+
+
+            &:hover{
+              @include soclink-hover;
+                
+            }
+        }
+    
+    }
+   
+    
+}
+
+
+
+

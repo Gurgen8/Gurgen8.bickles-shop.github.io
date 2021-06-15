@@ -1,0 +1,84 @@
+.header{
+    @include header__mix();
+   
+    .header__container{
+
+       @include header-container;
+      
+
+
+        .header__row{
+            width: 40%;
+            margin-top:50px;
+
+        
+
+            .header__ul{
+
+                @include headul;
+               
+
+                .header__li{
+
+                    position:relative; 
+                    &:nth-child(4):after
+                         {
+                        content: "";
+                        width: 1px;
+                        height: 1px;
+                        border-radius: 1px;
+                        background:black;
+                        position: absolute;
+                        border:1px solid black;
+                        bottom:20%;
+                        right:-50%;
+
+                 
+    
+                    }
+                    &:nth-child(1):after
+                         {
+                        content: "";
+                        width: 1px;
+                        height: 1px;
+                        border-radius: 1px;
+                        background:black;
+                        position: absolute;
+                        bottom:20%;
+                        border:1px solid black;
+                        right:-30%;
+    
+                    }
+                    
+
+                    transition: 0.5s;
+                   &:hover{
+                       box-shadow:10px 5px 6px black;
+                 
+
+                   }
+
+
+                    .header__link{
+                        @include header__links;
+                        position: relative;
+                        
+                        
+
+                        
+
+                
+                    }
+                }
+              
+            }
+            
+        }
+
+    }
+    
+}
+
+
+
+
